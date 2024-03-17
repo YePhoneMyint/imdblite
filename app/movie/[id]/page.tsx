@@ -2,7 +2,7 @@ import { Result } from "@/lib/interface";
 import Image from "next/image";
 
 interface Prop {
-  params: { id: string; name: string };
+  params: { id: string };
 }
 
 const Page = async ({ params: { id } }: Prop) => {
@@ -18,8 +18,8 @@ const Page = async ({ params: { id } }: Prop) => {
           alt="poster"
           width={500}
           height={300}
-          //   style={{ width: "auto", height: "auto" }}
-          className="h-full max-w-full rounded-lg"
+          style={{ maxWidth: "100%", height: "100%" }}
+          className="rounded-lg"
           priority
         />
         <div>

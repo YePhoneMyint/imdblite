@@ -1,5 +1,4 @@
 import { IconProps } from "@radix-ui/react-icons/dist/types";
-import { LucideIcon } from "lucide-react";
 import Link from "next/link";
 import { ForwardRefExoticComponent, RefAttributes } from "react";
 
