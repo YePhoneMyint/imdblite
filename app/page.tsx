@@ -8,6 +8,8 @@ interface Prop {
   };
 }
 
+export const revalidate = 15;
+
 const Home = async ({ searchParams: { genre } }: Prop) => {
   const res = await fetch(
     `https://api.themoviedb.org/3${genre == "top-rated" ? "/movie/top_rated" : "/trending/all/week"}?api_key=${API_KEY}&language=en-US&page=1`,
