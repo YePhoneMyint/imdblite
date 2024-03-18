@@ -16,9 +16,8 @@ const ResultCard = ({ result }: Prop) => {
           alt="movie poster"
           width={500}
           height={300}
-          style={{ width: "auto", height: "auto" }}
+          // style={{ width: "auto", height: "auto" }}
           className="transition-opacity duration-300 group-hover:opacity-75 sm:rounded-t-lg"
-          priority
         />
         <div className="p-2">
           <p className="line-clamp-2 text-sm">{result.overview}</p>

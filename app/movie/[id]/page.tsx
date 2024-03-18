@@ -1,4 +1,5 @@
 import { Result } from "@/lib/interface";
+import { api_key } from "@/lib/keys";
 import Image from "next/image";
 
 interface Prop {
@@ -7,7 +8,7 @@ interface Prop {
 
 const Page = async ({ params: { id } }: Prop) => {
   const res = await fetch(
-    `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.API_KEY as string}`,
+    `https://api.themoviedb.org/3/movie/${id}?api_key=${api_key}`,
   );
   const result: Result = await res.json();
   return (

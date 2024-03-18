@@ -1,4 +1,5 @@
 import Results from "@/components/Results";
+import { api_key } from "@/lib/keys";
 
 interface Prop {
   params: { text: string };
@@ -6,7 +7,7 @@ interface Prop {
 
 const Page = async ({ params: { text } }: Prop) => {
   const res = await fetch(
-    `https://api.themoviedb.org/3/search/movie?query=${text}&api_key=${process.env.API_KEY}&language=en-US&page=1&include_adult=false`,
+    `https://api.themoviedb.org/3/search/movie?query=${text}&api_key=${api_key}&language=en-US&page=1&include_adult=false`,
   );
   const data = await res.json();
   const results = data.results;
